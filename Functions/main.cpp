@@ -3,25 +3,10 @@
 #include<iostream>
 using namespace std;
 
-int Add(int a, int b) //функция сложения 2х чисел a и b
-{
-	int c = a + b;
-	return(c);
-}
-int Sub(int a, int b)
-{
-	return a - b;
-}
-
-int Mul(int a, int b)
-{
-	return a * b;
-}
-
-double Div(int a, int b)
-{
-	return (double)a / b; //поменяли int на double, чтобы вывести значение с запятой
-}
+int Add(int a, int b); //Прототип функции
+int Sub(int a, int b); //здесь мы говорим, что такая функция есть
+int Mul(int a, int b); //реализация функция (определение функции - Function definition)
+double Div(int a, int b);
 
 void main()
 {
@@ -37,9 +22,30 @@ void main()
 
 	int a, b;
 	cout << "Введите 2 числа: "; cin >> a >> b;
-	int c = Add(a, b); //присваиваем переменной с значение функции
+	int c = Add(a, b); //использование функции (вызов функции - function call)
+	//присваиваем переменной с значение функции
 	cout << a << " + " << b <<" = " << c << endl;
 	cout << a << " - " << b << " = " << Sub(a, b) << endl; //теперь вызовем не переменную, а саму функцию
 	cout << a << " * " << b << " = " << Mul(a, b) << endl;
 	cout << a << " / " << b << " = " << Div(a, b) << endl;
+}
+
+int Add(int a, int b) //функция сложения 2х чисел a и b
+{
+	int c = a + b;
+	return(c);        //здесь функция возвращает значение суммы
+}
+int Sub(int a, int b)
+{
+	return a - b;
+}
+
+int Mul(int a, int b)
+{
+	return a * b;
+}
+
+double Div(int a, int b)
+{
+	return (double)a / b; //поменяли int на double, чтобы вывести значение с запятой
 }
