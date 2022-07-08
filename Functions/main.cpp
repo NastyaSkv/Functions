@@ -18,9 +18,9 @@ int Mul(int a, int b)
 	return a * b;
 }
 
-int Div(int a, int b)
+double Div(int a, int b)
 {
-	return a / b;
+	return (double)a / b; //поменяли int на double, чтобы вывести значение с запятой
 }
 
 void main()
@@ -40,4 +40,6 @@ void main()
 	int c = Add(a, b); //присваиваем переменной с значение функции
 	cout << a << " + " << b <<" = " << c << endl;
 	cout << a << " - " << b << " = " << Sub(a, b) << endl; //теперь вызовем не переменную, а саму функцию
+	cout << a << " * " << b << " = " << Mul(a, b) << endl;
+	cout << a << " / " << b << " = " << Div(a, b) << endl;
 }
