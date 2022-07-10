@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 using namespace std;
 
 #define TASK_1
@@ -13,17 +13,17 @@ void main()
 	
 #ifdef TASK_1
 	int number;
-	cout << "Ââåäèòå ÷èñëî: "; cin >> number;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾: "; cin >> number;
 	int f = Factorial(number);
-	cout << "Ôàêòîðèàë ÷èñëà [ " << number << "! ] = " << f << endl << endl;
+	cout << "Ð¤Ð°ÐºÑ‚Ð¾Ñ€Ð¸Ð°Ð» Ñ‡Ð¸ÑÐ»Ð° [ " << number << "! ] = " << f << endl << endl;
 #endif
 
 #ifdef TASK_2
 	int basis, indicator;
-	cout << "Ââåäèòå îñíîâàíèå ÷èñëà: "; cin >> basis;
-	cout << "Ââåäèòå ïîêàçàòåëü ñòåïåíè: "; cin >> indicator;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¾ÑÐ½Ð¾Ð²Ð°Ð½Ð¸Ðµ Ñ‡Ð¸ÑÐ»Ð°: "; cin >> basis;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿Ð¾ÐºÐ°Ð·Ð°Ñ‚ÐµÐ»ÑŒ ÑÑ‚ÐµÐ¿ÐµÐ½Ð¸: "; cin >> indicator;
 	int n = Exponentiation(basis, indicator);
-	cout << "×èñëî " << basis << " â ñòåïåíè " << indicator << " = " << n << endl;
+	cout << "Ð§Ð¸ÑÐ»Ð¾ " << basis << " Ð² ÑÑ‚ÐµÐ¿ÐµÐ½Ð¸ " << indicator << " = " << n << endl;
 #endif
 }
 
