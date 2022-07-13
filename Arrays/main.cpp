@@ -1,4 +1,4 @@
-//Arrays
+﻿//Arrays
 #include<iostream>
 using namespace std;
 
@@ -26,7 +26,7 @@ void main()
 	Print(brr, SIZE);
 }
 
-void FillRand(int arr[], const int n)
+void FillRand(int arr[], const int n)   //заполнение массива случайными числами
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -34,7 +34,7 @@ void FillRand(int arr[], const int n)
 	}
 }
 
-void Print(int arr[], const int n)
+void Print(int arr[], const int n)      //вывод массива
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -42,7 +42,7 @@ void Print(int arr[], const int n)
 	}cout << endl;
 }
 
-void Sort(int arr[], const int n)
+void Sort(int arr[], const int n)       //сортировка по возрастанию
 {
 	for (int i = 0; i < n; i++)
 	{
