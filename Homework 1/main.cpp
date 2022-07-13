@@ -1,4 +1,7 @@
-﻿#include<iostream>
+﻿//добавить функции: Factorial(принимает число, и возвращает Факториал этого числа);
+//                  Power (принимает основание и показатель степени, и возвращает степень);
+
+#include<iostream>
 using namespace std;
 
 #define TASK_1
