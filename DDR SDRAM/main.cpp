@@ -1,4 +1,4 @@
-#include<iostream>
+п»ї#include<iostream>
 using namespace std;
 
 #define tab "\t"
@@ -36,13 +36,13 @@ void main()
 	Parameters(freal, feffective, throughput, r, N, t, times);  //DDR 5
 }
 
-void Heading(int t)                                                                                             //вывод шапки
+void Heading(int t)                                                                                             //РІС‹РІРѕРґ С€Р°РїРєРё
 {
 	cout << "----------" << tab << " DDR " << t << " SDRAM " << tab << "----------" << endl << endl;
 	cout << "Freal, MHz" << tab << "Feffective, MHz " << tab << "N, Byte " << tab << "Throughput, MBps" << endl;
 }
 
-void Feffective(float freal[], float feffective[], const int r, int times)                                      //подсчет эффективной частоты
+void Feffective(float freal[], float feffective[], const int r, int times)                                      //РїРѕРґСЃС‡РµС‚ СЌС„С„РµРєС‚РёРІРЅРѕР№ С‡Р°СЃС‚РѕС‚С‹
 {
 	for (int i = 0; i < r; i++)
 	{
@@ -50,7 +50,7 @@ void Feffective(float freal[], float feffective[], const int r, int times)      
 	}
 }
 
-void Screen(float freal[], float feffective[], float throughput[], const int r, int N)                          //вывод на экран
+void Screen(float freal[], float feffective[], float throughput[], const int r, int N)                          //РІС‹РІРѕРґ РЅР° СЌРєСЂР°РЅ
 {
 	for (int i = 0; i < r; i++)
 	{
@@ -58,10 +58,10 @@ void Screen(float freal[], float feffective[], float throughput[], const int r, 
 	}
 }
 
-void Parameters(float freal[], float feffective[], float throughput[], const int r, int N, int t, int times)    //общая ф-я для одного DDR
+void Parameters(float freal[], float feffective[], float throughput[], const int r, int N, int t, int times)    //РѕР±С‰Р°СЏ С„-СЏ РґР»СЏ РѕРґРЅРѕРіРѕ DDR
 {
-	Heading(t);                                       //вывод шапки
-	Feffective(freal, feffective, r, times);          //подсчет эффективной частоты
-	Feffective(feffective, throughput, r, N);         //вызываем ещё раз функцию, но считаем пропускную способность
-	Screen(freal, feffective, throughput, r, N);      //вывод на экран
+	Heading(t);                                       //РІС‹РІРѕРґ С€Р°РїРєРё
+	Feffective(freal, feffective, r, times);          //РїРѕРґСЃС‡РµС‚ СЌС„С„РµРєС‚РёРІРЅРѕР№ С‡Р°СЃС‚РѕС‚С‹
+	Feffective(feffective, throughput, r, N);         //РІС‹Р·С‹РІР°РµРј РµС‰С‘ СЂР°Р· С„СѓРЅРєС†РёСЋ, РЅРѕ СЃС‡РёС‚Р°РµРј РїСЂРѕРїСѓСЃРєРЅСѓСЋ СЃРїРѕСЃРѕР±РЅРѕСЃС‚СЊ
+	Screen(freal, feffective, throughput, r, N);      //РІС‹РІРѕРґ РЅР° СЌРєСЂР°РЅ
 }
