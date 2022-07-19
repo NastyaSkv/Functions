@@ -1,11 +1,11 @@
-//Написать перегруженные функции для работы с одномерными и двумерными массивами
-// типа int, float, double и char:: 
-//                  Sum (возвращает сумму элементов массива);
-//                  Avg (возвращает среднее-арифметическое элементов массива);
-//                  minValueIn (возвращает минимальное значение из массива);
-//                  maxValueIn (возвращает максимальное значение из массива);
-//                  shiftLeft (циклически сдвигает массив на заданное число элементов влево);
-//                  shiftRight (циклически сдвигает массив на заданное число элементов вправо).
+п»ї//РќР°РїРёСЃР°С‚СЊ РїРµСЂРµРіСЂСѓР¶РµРЅРЅС‹Рµ С„СѓРЅРєС†РёРё РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ РѕРґРЅРѕРјРµСЂРЅС‹РјРё Рё РґРІСѓРјРµСЂРЅС‹РјРё РјР°СЃСЃРёРІР°РјРё
+// С‚РёРїР° int, float, double Рё char:: 
+//                  Sum (РІРѕР·РІСЂР°С‰Р°РµС‚ СЃСѓРјРјСѓ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°);
+//                  Avg (РІРѕР·РІСЂР°С‰Р°РµС‚ СЃСЂРµРґРЅРµРµ-Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°);
+//                  minValueIn (РІРѕР·РІСЂР°С‰Р°РµС‚ РјРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РёР· РјР°СЃСЃРёРІР°);
+//                  maxValueIn (РІРѕР·РІСЂР°С‰Р°РµС‚ РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РёР· РјР°СЃСЃРёРІР°);
+//                  shiftLeft (С†РёРєР»РёС‡РµСЃРєРё СЃРґРІРёРіР°РµС‚ РјР°СЃСЃРёРІ РЅР° Р·Р°РґР°РЅРЅРѕРµ С‡РёСЃР»Рѕ СЌР»РµРјРµРЅС‚РѕРІ РІР»РµРІРѕ);
+//                  shiftRight (С†РёРєР»РёС‡РµСЃРєРё СЃРґРІРёРіР°РµС‚ РјР°СЃСЃРёРІ РЅР° Р·Р°РґР°РЅРЅРѕРµ С‡РёСЃР»Рѕ СЌР»РµРјРµРЅС‚РѕРІ РІРїСЂР°РІРѕ).
 
 #include<iostream>
 using namespace std;
@@ -55,7 +55,7 @@ void main()
 	setlocale(LC_ALL, "");
 	int shift;
 
-	cout << tab << tab << "ОДНОМЕРНЫЕ МАССИВЫ" << endl << endl;
+	cout << tab << tab << "РћР”РќРћРњР•Р РќР«Р• РњРђРЎРЎРР’Р«" << endl << endl;
 	const int n = 10;
 	int arr[n];
 	const int m = 9;
@@ -65,78 +65,78 @@ void main()
 
 #ifdef ONE_INT
 	cout << qw "->   INT   <-" << qw << endl;
-	FillRand(arr, n);                                                                                //ф-я заполнения int
-	Print(arr, n);                                                                                   //ф-я вызова                                                                            //ф-я суммы
-	cout << "**1.**  Сумма элементов массива = " << Sum(arr, n) << endl << endl;
-	cout << "**2.**  Среднее арифметическое элементов массива = " << Avg(arr, n) << endl << endl; //ф-я среднего арифметического
-	int min = minValueIn(arr, n);                                                                    //ф-я мин. значения
-	cout << "**3.**  Минимальное значение массива = " << min << endl << endl;
-	int max = maxValueIn(arr, n);                                                                    //ф-я макс. значения
-	cout << "**4.**  Максимальное значение массива = " << max << endl << endl;
-	cout << "Введите количество сдвигов: "; cin >> shift;
-	shiftLeft(arr, n, shift);                                                                        //ф-я сдвига влево
-	cout << endl << "**5.**  Сдвиг массива влево:" << endl;
+	FillRand(arr, n);                                                                                //С„-СЏ Р·Р°РїРѕР»РЅРµРЅРёСЏ int
+	Print(arr, n);                                                                                   //С„-СЏ РІС‹Р·РѕРІР°                                                                            //С„-СЏ СЃСѓРјРјС‹
+	cout << "**1.**  РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР° = " << Sum(arr, n) << endl << endl;
+	cout << "**2.**  РЎСЂРµРґРЅРµРµ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР° = " << Avg(arr, n) << endl << endl; //С„-СЏ СЃСЂРµРґРЅРµРіРѕ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРіРѕ
+	int min = minValueIn(arr, n);                                                                    //С„-СЏ РјРёРЅ. Р·РЅР°С‡РµРЅРёСЏ
+	cout << "**3.**  РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РјР°СЃСЃРёРІР° = " << min << endl << endl;
+	int max = maxValueIn(arr, n);                                                                    //С„-СЏ РјР°РєСЃ. Р·РЅР°С‡РµРЅРёСЏ
+	cout << "**4.**  РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РјР°СЃСЃРёРІР° = " << max << endl << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРґРІРёРіРѕРІ: "; cin >> shift;
+	shiftLeft(arr, n, shift);                                                                        //С„-СЏ СЃРґРІРёРіР° РІР»РµРІРѕ
+	cout << endl << "**5.**  РЎРґРІРёРі РјР°СЃСЃРёРІР° РІР»РµРІРѕ:" << endl;
 	Print(arr, n);
 	Streak();
-	cout << "Для \"чистоты\" эксперимента сгенерируем новый массив: " << endl;
+	cout << "Р”Р»СЏ \"С‡РёСЃС‚РѕС‚С‹\" СЌРєСЃРїРµСЂРёРјРµРЅС‚Р° СЃРіРµРЅРµСЂРёСЂСѓРµРј РЅРѕРІС‹Р№ РјР°СЃСЃРёРІ: " << endl;
 	FillRand(arr, n);
 	Print(arr, n);
-	cout << "Введите количество сдвигов: "; cin >> shift;
-	cout << endl << "**6.**  Сдвиг массива вправо:" << endl;
-	shiftRight(arr, n, shift);                                                                       //ф-я сдвига вправо
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРґРІРёРіРѕРІ: "; cin >> shift;
+	cout << endl << "**6.**  РЎРґРІРёРі РјР°СЃСЃРёРІР° РІРїСЂР°РІРѕ:" << endl;
+	shiftRight(arr, n, shift);                                                                       //С„-СЏ СЃРґРІРёРіР° РІРїСЂР°РІРѕ
 #endif
 
 #ifdef ONE_DOUBLE
 	cout << qw "->  DOUBLE   <-" << qw << endl;
-	FillRand(brr, m);                                                                                 //ф-я заполнения double
-	Print(brr, m);                                                                                    //ф-я вызова                                                                         
-	cout << "**1.**  Сумма элементов массива = " << Sum(brr, m) << endl << endl;                      //ф-я суммы
-	cout << "**2.**  Среднее арифметическое элементов массива = " << Avg(brr, m) << endl << endl;     //ф-я среднего арифметического                                                             
-	cout << "**3.**  Минимальное значение массива = " << minValueIn(brr, m) << endl << endl;          // ф - я мин.значения                                                                  
-	cout << "**4.**  Максимальное значение массива = " << maxValueIn(brr, m) << endl << endl;         //ф-я макс. значения
-	cout << "Введите количество сдвигов: "; cin >> shift;
-	shiftLeft(brr, m, shift);                                                                          //ф-я сдвига влево
-	cout << endl << "**5.**  Сдвиг массива влево:" << endl;
+	FillRand(brr, m);                                                                                 //С„-СЏ Р·Р°РїРѕР»РЅРµРЅРёСЏ double
+	Print(brr, m);                                                                                    //С„-СЏ РІС‹Р·РѕРІР°                                                                         
+	cout << "**1.**  РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР° = " << Sum(brr, m) << endl << endl;                      //С„-СЏ СЃСѓРјРјС‹
+	cout << "**2.**  РЎСЂРµРґРЅРµРµ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР° = " << Avg(brr, m) << endl << endl;     //С„-СЏ СЃСЂРµРґРЅРµРіРѕ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРіРѕ                                                             
+	cout << "**3.**  РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РјР°СЃСЃРёРІР° = " << minValueIn(brr, m) << endl << endl;          // С„ - СЏ РјРёРЅ.Р·РЅР°С‡РµРЅРёСЏ                                                                  
+	cout << "**4.**  РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РјР°СЃСЃРёРІР° = " << maxValueIn(brr, m) << endl << endl;         //С„-СЏ РјР°РєСЃ. Р·РЅР°С‡РµРЅРёСЏ
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРґРІРёРіРѕРІ: "; cin >> shift;
+	shiftLeft(brr, m, shift);                                                                          //С„-СЏ СЃРґРІРёРіР° РІР»РµРІРѕ
+	cout << endl << "**5.**  РЎРґРІРёРі РјР°СЃСЃРёРІР° РІР»РµРІРѕ:" << endl;
 	Print(brr, m);
 	Streak();
-	cout << "Для \"чистоты\" эксперимента сгенерируем новый массив: " << endl;
+	cout << "Р”Р»СЏ \"С‡РёСЃС‚РѕС‚С‹\" СЌРєСЃРїРµСЂРёРјРµРЅС‚Р° СЃРіРµРЅРµСЂРёСЂСѓРµРј РЅРѕРІС‹Р№ РјР°СЃСЃРёРІ: " << endl;
 	FillRand(brr, m);
 	Print(brr, m);
-	cout << "Введите количество сдвигов: "; cin >> shift;
-	cout << endl << "**6.**  Сдвиг массива вправо:" << endl;
-	shiftRight(brr, m, shift);                                                                       //ф-я сдвига вправо
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРґРІРёРіРѕРІ: "; cin >> shift;
+	cout << endl << "**6.**  РЎРґРІРёРі РјР°СЃСЃРёРІР° РІРїСЂР°РІРѕ:" << endl;
+	shiftRight(brr, m, shift);                                                                       //С„-СЏ СЃРґРІРёРіР° РІРїСЂР°РІРѕ
 #endif
 
 #ifdef ONE_CHAR
 	cout << qw "->   CHAR   <-" << qw << endl;
-	FillRand(vrr, t);                                                                                //ф-я заполнения int
-	Print(vrr, t);                                                                                 //ф-я вызова                                                                            //ф-я суммы
-	cout << "**1.**  Сумма элементов массива = " << Sum(vrr, t) << endl << endl;
-	cout << "**2.**  Среднее арифметическое элементов массива = " << Avg(vrr, t) << endl << endl; //ф-я среднего арифметического                                                                  
-	cout << "**3.**  Минимальное значение массива = " << minValueIn(vrr, t) << endl << endl;           //ф-я мин. значения                                                                   
-	cout << "**4.**  Максимальное значение массива = " << maxValueIn(vrr, t) << endl << endl;         //ф-я макс. значения
-	cout << "Введите количество сдвигов: "; cin >> shift;
-	shiftLeft(vrr, t, shift);                                                                        //ф-я сдвига влево
-	cout << endl << "**5.**  Сдвиг массива влево:" << endl;
+	FillRand(vrr, t);                                                                                //С„-СЏ Р·Р°РїРѕР»РЅРµРЅРёСЏ int
+	Print(vrr, t);                                                                                 //С„-СЏ РІС‹Р·РѕРІР°                                                                            //С„-СЏ СЃСѓРјРјС‹
+	cout << "**1.**  РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР° = " << Sum(vrr, t) << endl << endl;
+	cout << "**2.**  РЎСЂРµРґРЅРµРµ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР° = " << Avg(vrr, t) << endl << endl; //С„-СЏ СЃСЂРµРґРЅРµРіРѕ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРіРѕ                                                                  
+	cout << "**3.**  РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РјР°СЃСЃРёРІР° = " << minValueIn(vrr, t) << endl << endl;           //С„-СЏ РјРёРЅ. Р·РЅР°С‡РµРЅРёСЏ                                                                   
+	cout << "**4.**  РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РјР°СЃСЃРёРІР° = " << maxValueIn(vrr, t) << endl << endl;         //С„-СЏ РјР°РєСЃ. Р·РЅР°С‡РµРЅРёСЏ
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРґРІРёРіРѕРІ: "; cin >> shift;
+	shiftLeft(vrr, t, shift);                                                                        //С„-СЏ СЃРґРІРёРіР° РІР»РµРІРѕ
+	cout << endl << "**5.**  РЎРґРІРёРі РјР°СЃСЃРёРІР° РІР»РµРІРѕ:" << endl;
 	Print(vrr, t);
 	Streak();
-	cout << "Для \"чистоты\" эксперимента сгенерируем новый массив: " << endl;
+	cout << "Р”Р»СЏ \"С‡РёСЃС‚РѕС‚С‹\" СЌРєСЃРїРµСЂРёРјРµРЅС‚Р° СЃРіРµРЅРµСЂРёСЂСѓРµРј РЅРѕРІС‹Р№ РјР°СЃСЃРёРІ: " << endl;
 	FillRand(vrr, t);
 	Print(vrr, t);
-	cout << "Введите количество сдвигов: "; cin >> shift;
-	cout << endl << "**6.**  Сдвиг массива вправо:" << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРґРІРёРіРѕРІ: "; cin >> shift;
+	cout << endl << "**6.**  РЎРґРІРёРі РјР°СЃСЃРёРІР° РІРїСЂР°РІРѕ:" << endl;
 	shiftRight(vrr, t, shift);
 #endif
 }
 
-void FillRand(int arr[], const int n)        //заполнение массива int случайными числами
+void FillRand(int arr[], const int n)        //Р·Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР° int СЃР»СѓС‡Р°Р№РЅС‹РјРё С‡РёСЃР»Р°РјРё
 {
 	for (int i = 0; i < n; i++)
 	{
 		arr[i] = rand() % 100;
 	}
 }
-void FillRand(double arr[], const int n)        //заполнение массива double случайными числами
+void FillRand(double arr[], const int n)        //Р·Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР° double СЃР»СѓС‡Р°Р№РЅС‹РјРё С‡РёСЃР»Р°РјРё
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -144,7 +144,7 @@ void FillRand(double arr[], const int n)        //заполнение массива double случ
 		arr[i] /= 1000;
 	}
 }
-void FillRand(char arr[], const int n)        //заполнение массива double случайными числами char
+void FillRand(char arr[], const int n)        //Р·Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР° double СЃР»СѓС‡Р°Р№РЅС‹РјРё С‡РёСЃР»Р°РјРё char
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -152,21 +152,21 @@ void FillRand(char arr[], const int n)        //заполнение массива double случай
 	}
 }
 
-void Print(int arr[], const int n)           //вывод массива int
+void Print(int arr[], const int n)           //РІС‹РІРѕРґ РјР°СЃСЃРёРІР° int
 {
 	for (int i = 0; i < n; i++)
 	{
 		cout << arr[i] << tab;
 	} cout << endl << endl;
 }
-void Print(double arr[], const int n)           //вывод массива double
+void Print(double arr[], const int n)           //РІС‹РІРѕРґ РјР°СЃСЃРёРІР° double
 {
 	for (int i = 0; i < n; i++)
 	{
 		cout << arr[i] << tab;
 	} cout << endl << endl;
 }
-void Print(char arr[], const int n)           //вывод массива char
+void Print(char arr[], const int n)           //РІС‹РІРѕРґ РјР°СЃСЃРёРІР° char
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -174,7 +174,7 @@ void Print(char arr[], const int n)           //вывод массива char
 	} cout << endl << endl;
 }
 
-int Sum(int arr[], const int n)              //сумма элементов массива int
+int Sum(int arr[], const int n)              //СЃСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР° int
 {
 	int s = 0;
 	for (int i = 0; i < n; i++)
@@ -183,7 +183,7 @@ int Sum(int arr[], const int n)              //сумма элементов массива int
 	}
 	return(s);
 }
-double Sum(double arr[], const int n)              //сумма элементов массива double
+double Sum(double arr[], const int n)              //СЃСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР° double
 {
 	double s = 0;
 	for (int i = 0; i < n; i++)
@@ -192,7 +192,7 @@ double Sum(double arr[], const int n)              //сумма элементов массива dou
 	}
 	return(s);
 }
-char Sum(char arr[], const int n)              //сумма элементов массива char
+char Sum(char arr[], const int n)              //СЃСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР° char
 {
 	char s = 0;
 	for (int i = 0; i < n; i++)
@@ -215,7 +215,7 @@ char Avg(char arr[], const int n)
 	return(char)Sum(arr, n) / n;
 }
 
-int minValueIn(int arr[], const int n)       //возвращает минимальное значение из массива int
+int minValueIn(int arr[], const int n)       //РІРѕР·РІСЂР°С‰Р°РµС‚ РјРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РёР· РјР°СЃСЃРёРІР° int
 {
 	int min = arr[0];
 	for (int i = 0; i < n; i++)
@@ -227,7 +227,7 @@ int minValueIn(int arr[], const int n)       //возвращает минимальное значение и
 	}
 	return(min);
 }
-double minValueIn(double arr[], const int n)       //возвращает минимальное значение из массива double
+double minValueIn(double arr[], const int n)       //РІРѕР·РІСЂР°С‰Р°РµС‚ РјРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РёР· РјР°СЃСЃРёРІР° double
 {
 	double min = arr[0];
 	for (int i = 0; i < n; i++)
@@ -239,7 +239,7 @@ double minValueIn(double arr[], const int n)       //возвращает минимальное знач
 	}
 	return(min);
 }
-char minValueIn(char arr[], const int n)       //возвращает минимальное значение из массива double
+char minValueIn(char arr[], const int n)       //РІРѕР·РІСЂР°С‰Р°РµС‚ РјРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РёР· РјР°СЃСЃРёРІР° double
 {
 	char min = arr[0];
 	for (int i = 0; i < n; i++)
@@ -252,7 +252,7 @@ char minValueIn(char arr[], const int n)       //возвращает минимальное значение
 	return(min);
 }
 
-int maxValueIn(int arr[], const int n) //возвращает максимальное значение из массива int
+int maxValueIn(int arr[], const int n) //РІРѕР·РІСЂР°С‰Р°РµС‚ РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РёР· РјР°СЃСЃРёРІР° int
 {
 	int max = arr[0];
 	for (int i = 0; i < n; i++)
@@ -264,7 +264,7 @@ int maxValueIn(int arr[], const int n) //возвращает максимальное значение из мас
 	}
 	return(max);
 }
-double maxValueIn(double arr[], const int n) //возвращает максимальное значение из массива double
+double maxValueIn(double arr[], const int n) //РІРѕР·РІСЂР°С‰Р°РµС‚ РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РёР· РјР°СЃСЃРёРІР° double
 {
 	double max = arr[0];
 	for (int i = 0; i < n; i++)
@@ -276,7 +276,7 @@ double maxValueIn(double arr[], const int n) //возвращает максимальное значение 
 	}
 	return(max);
 }
-char maxValueIn(char arr[], const int n) //возвращает максимальное значение из массива double
+char maxValueIn(char arr[], const int n) //РІРѕР·РІСЂР°С‰Р°РµС‚ РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РёР· РјР°СЃСЃРёРІР° double
 {
 	char max = arr[0];
 	for (int i = 0; i < n; i++)
@@ -289,11 +289,11 @@ char maxValueIn(char arr[], const int n) //возвращает максимальное значение из м
 	return(max);
 }
 
-void shiftLeft(int arr[], const int n, int shift) //циклически сдвигает массив на заданное число элементов влево int
+void shiftLeft(int arr[], const int n, int shift) //С†РёРєР»РёС‡РµСЃРєРё СЃРґРІРёРіР°РµС‚ РјР°СЃСЃРёРІ РЅР° Р·Р°РґР°РЅРЅРѕРµ С‡РёСЃР»Рѕ СЌР»РµРјРµРЅС‚РѕРІ РІР»РµРІРѕ int
 {
 	for (int i = 0; i < shift; i++)
 	{
-		int buffer = arr[0];            //буферная переменная
+		int buffer = arr[0];            //Р±СѓС„РµСЂРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ
 		for (int i = 0; i < n; i++)
 		{
 			arr[i] = arr[i + 1];
@@ -301,11 +301,11 @@ void shiftLeft(int arr[], const int n, int shift) //циклически сдвигает массив н
 		arr[n - 1] = buffer;
 	}
 }
-void shiftLeft(double arr[], const int n, int shift) //циклически сдвигает массив на заданное число элементов влево double
+void shiftLeft(double arr[], const int n, int shift) //С†РёРєР»РёС‡РµСЃРєРё СЃРґРІРёРіР°РµС‚ РјР°СЃСЃРёРІ РЅР° Р·Р°РґР°РЅРЅРѕРµ С‡РёСЃР»Рѕ СЌР»РµРјРµРЅС‚РѕРІ РІР»РµРІРѕ double
 {
 	for (int i = 0; i < shift; i++)
 	{
-		double buffer = arr[0];            //буферная переменная
+		double buffer = arr[0];            //Р±СѓС„РµСЂРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ
 		for (int i = 0; i < n; i++)
 		{
 			arr[i] = arr[i + 1];
@@ -313,11 +313,11 @@ void shiftLeft(double arr[], const int n, int shift) //циклически сдвигает масси
 		arr[n - 1] = buffer;
 	}
 }
-void shiftLeft(char arr[], const int n, int shift) //циклически сдвигает массив на заданное число элементов влево double
+void shiftLeft(char arr[], const int n, int shift) //С†РёРєР»РёС‡РµСЃРєРё СЃРґРІРёРіР°РµС‚ РјР°СЃСЃРёРІ РЅР° Р·Р°РґР°РЅРЅРѕРµ С‡РёСЃР»Рѕ СЌР»РµРјРµРЅС‚РѕРІ РІР»РµРІРѕ double
 {
 	for (int i = 0; i < shift; i++)
 	{
-		char buffer = arr[0];            //буферная переменная
+		char buffer = arr[0];            //Р±СѓС„РµСЂРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ
 		for (int i = 0; i < n; i++)
 		{
 			arr[i] = arr[i + 1];
@@ -326,7 +326,7 @@ void shiftLeft(char arr[], const int n, int shift) //циклически сдвигает массив 
 	}
 }
 
-void shiftRight(int arr[], const int n, int shift) //циклически сдвигает массив на заданное число элементов вправо int
+void shiftRight(int arr[], const int n, int shift) //С†РёРєР»РёС‡РµСЃРєРё СЃРґРІРёРіР°РµС‚ РјР°СЃСЃРёРІ РЅР° Р·Р°РґР°РЅРЅРѕРµ С‡РёСЃР»Рѕ СЌР»РµРјРµРЅС‚РѕРІ РІРїСЂР°РІРѕ int
 {
 	for (int i = 0; i < shift; i++)
 	{
@@ -339,7 +339,7 @@ void shiftRight(int arr[], const int n, int shift) //циклически сдвигает массив 
 	}
 	Print(arr, n);
 }
-void shiftRight(double arr[], const int n, int shift) //циклически сдвигает массив на заданное число элементов вправо double
+void shiftRight(double arr[], const int n, int shift) //С†РёРєР»РёС‡РµСЃРєРё СЃРґРІРёРіР°РµС‚ РјР°СЃСЃРёРІ РЅР° Р·Р°РґР°РЅРЅРѕРµ С‡РёСЃР»Рѕ СЌР»РµРјРµРЅС‚РѕРІ РІРїСЂР°РІРѕ double
 {
 	for (int i = 0; i < shift; i++)
 	{
@@ -352,7 +352,7 @@ void shiftRight(double arr[], const int n, int shift) //циклически сдвигает масс
 	}
 	Print(arr, n);
 }
-void shiftRight(char arr[], const int n, int shift) //циклически сдвигает массив на заданное число элементов вправо double
+void shiftRight(char arr[], const int n, int shift) //С†РёРєР»РёС‡РµСЃРєРё СЃРґРІРёРіР°РµС‚ РјР°СЃСЃРёРІ РЅР° Р·Р°РґР°РЅРЅРѕРµ С‡РёСЃР»Рѕ СЌР»РµРјРµРЅС‚РѕРІ РІРїСЂР°РІРѕ double
 {
 	for (int i = 0; i < shift; i++)
 	{
