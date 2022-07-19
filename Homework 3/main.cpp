@@ -12,17 +12,23 @@ using namespace std;
 
 #define tab "\t"
 #define qw "- - - - - - - - -"
-#define ONE_INT
-#define ONE_DOUBLE
-#define ONE_CHAR
+//#define ONE_INT
+//#define ONE_DOUBLE
+//#define ONE_CHAR
+#define TWO_INT
+
+const int ROWS = 2;
+const int COLS = 5;
 
 void FillRand(int arr[], const int n);
 void FillRand(double arr[], const int n);
 void FillRand(char arr[], const int n);
+void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS);
 
 void Print(int arr[], const int n);
 void Print(double arr[], const int n);
 void Print(char arr[], const int n);
+void Print(int arr[ROWS][COLS], const int ROWS, const int COLS);
 
 int Sum(int arr[], const int n);
 double Sum(double arr[], const int n);
@@ -58,10 +64,14 @@ void main()
 	cout << tab << tab << "ОДНОМЕРНЫЕ МАССИВЫ" << endl << endl;
 	const int n = 10;
 	int arr[n];
+	
 	const int m = 9;
 	double brr[m];
+	
 	const int t = 8;
 	char vrr[t];
+	
+	int crr[ROWS][COLS];
 
 #ifdef ONE_INT
 	cout << qw "->   INT   <-" << qw << endl;
@@ -127,6 +137,12 @@ void main()
 	cout << endl << "**6.**  Сдвиг массива вправо:" << endl;
 	shiftRight(vrr, t, shift);
 #endif
+cout << tab << tab << "ДВУМЕРНЫЕ МАССИВЫ" << endl << endl;
+#ifdef TWO_INT
+cout << qw "->   INT   <-" << qw << endl;
+FillRand(crr, ROWS, COLS);                                                                           //ф-я заполнения int
+Print(crr, ROWS, COLS);
+#endif
 }
 
 void FillRand(int arr[], const int n)        //заполнение массива int случайными числами
@@ -151,6 +167,16 @@ void FillRand(char arr[], const int n)        //заполнение масси�
 		arr[i] = rand();
 	}
 }
+void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			arr[i][j] = rand() % 100;
+		}
+	}
+}
 
 void Print(int arr[], const int n)           //вывод массива int
 {
@@ -172,6 +198,16 @@ void Print(char arr[], const int n)           //вывод массива char
 	{
 		cout << arr[i] << tab;
 	} cout << endl << endl;
+}
+void Print(int arr[ROWS][COLS], const int ROWS, const int COLS)           //вывод массива int
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			cout << arr[i][j] << tab;
+		}cout << endl << endl;
+	}
 }
 
 int Sum(int arr[], const int n)              //сумма элементов массива int
