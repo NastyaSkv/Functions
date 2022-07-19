@@ -108,36 +108,28 @@ int maxValueIn(int arr[], const int n) //возвращает максималь
 
 void shiftLeft(int arr[], const int n, int shift) //циклически сдвигает массив на заданное число элементов влево
 {
-	do {
-		for (int i = 0; ; )
+	for (int i = 0; i < shift; i++)
+	{
+		int buffer = arr[0];            //буферная переменная
+		for (int i = 0; i < n; i++)
 		{
-			int buffer = arr[n - 1];
-			arr[n - 1] = arr[i];
 			arr[i] = arr[i + 1];
-			for (int j = (i + 1); j < (n - 2); j++)
-			{
-				arr[j] = arr[j + 1];
-			}
-			arr[n - 2] = buffer;
-			break;
-		}shift--;
-	} while (shift);
+		}
+		arr[n - 1] = buffer;
+	}
 }
 
 void shiftRight(int arr[], const int n, int shift) //циклически сдвигает массив на заданное число элементов вправо
 {
-	do {
-		for (int i = 0; ; )
+	for (int i = 0; i < shift; i++)
+	{
+		int buffer = arr[n - 1];
+		for (int j = n - 1; j > 0; j--)
 		{
-			int buffer = arr[n - 1];
-			for (int j = (n - 1); j > i; j--)
-			{
-				arr[j] = arr[j - 1];
-			}
-			arr[i] = buffer;
-			break;
-		}shift--;
-	} while (shift);
+			arr[j] = arr[j - 1];
+		}
+		arr[0] = buffer;
+	}
 	Print(arr, n);
 }
 
